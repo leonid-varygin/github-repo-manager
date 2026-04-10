@@ -103,11 +103,22 @@ npm start
 
 ```
 github-tools/
-├── server.js           # Express-сервер с API эндпоинтами
+├── server.js               # Express-сервер с API эндпоинтами
 ├── public/
-│   └── index.html      # Веб-интерфейс (HTML + CSS + JS)
-├── .env.example        # Шаблон конфигурации
-├── .env                # Конфигурация (не в Git)
+│   ├── index.html          # HTML-разметка
+│   ├── css/
+│   │   └── styles.css      # Стили (тёмная тема GitHub, адаптив)
+│   └── js/
+│       ├── utils.js        # Утилиты (escapeHtml, translateError)
+│       ├── state.js        # Глобальное состояние и DOM-ссылки
+│       ├── toast.js        # Toast-уведомления
+│       ├── progress.js     # Прогресс-бар операций
+│       ├── modal.js        # Модальные окна (подтверждение, удаление)
+│       ├── render.js       # Рендеринг списка и обновление UI
+│       ├── api.js          # API-операции (видимость, удаление)
+│       └── app.js          # Точка входа, обработчики событий
+├── .env.example            # Шаблон конфигурации
+├── .env                    # Конфигурация (не в Git)
 ├── .gitignore
 ├── package.json
 └── README.md
